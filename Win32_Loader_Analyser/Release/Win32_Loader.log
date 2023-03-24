@@ -1,1 +1,162 @@
-﻿G:\VisualStudi\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: Die Windows SDK-Version 10.0.15063.0 wurde nicht gefunden. Installieren Sie die erforderliche Version des Windows SDK, oder ändern Sie die SDK-Version auf den Eigenschaftenseiten des Projekts. Sie können auch mit der rechten Maustaste auf die Projektmappe klicken und dann "Projektmappe neu zuweisen" auswählen.
+﻿  Win32Analyser.c
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(130,98): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(130,94): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(149,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(149,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(177,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(177,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(206,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(206,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(238,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(238,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(267,107): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(267,103): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(299,105): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(299,101): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(331,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(331,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(333,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(360,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(360,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(362,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(389,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(389,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(391,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(418,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(418,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(420,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(447,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(447,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(449,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(475,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(475,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(477,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(503,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(503,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(505,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(531,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(531,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(533,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(559,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(559,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(561,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(585,89): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(585,85): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(619,102): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(619,98): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(753,8): warning C4101: "szOutputString": Unreferenzierte lokale Variable
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Analyser.c(752,8): warning C4101: "szMessage": Unreferenzierte lokale Variable
+  Win32Loader.c
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(130,98): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(130,94): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(149,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(149,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(174,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(174,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(200,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(200,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(229,101): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(229,97): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(257,107): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(257,103): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(285,105): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(285,101): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(313,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(313,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(315,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(338,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(338,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(340,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(363,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(363,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(365,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(388,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(388,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(390,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(413,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(413,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(415,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(437,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(437,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(439,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(462,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(462,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(464,33): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(487,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(487,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(489,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(512,95): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(512,91): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(514,34): warning C4018: "<=": Konflikt zwischen "signed" und "unsigned"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(536,89): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(536,85): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(570,102): warning C4047: "Funktion": Anzahl der Dereferenzierungen bei "DWORD" und "void *" unterschiedlich
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(570,98): warning C4024: "RegistryGetValue": unterschiedliche Typen für formalen und übergebenen Parameter 4
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(746,4): warning C4133: "Funktion": Inkompatible Typen - von "char [5]" zu "LPCWSTR"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(747,4): warning C4133: "Funktion": Inkompatible Typen - von "char [16]" zu "LPCWSTR"
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(704,8): warning C4101: "szOutputString": Unreferenzierte lokale Variable
+I:\_Projekte\CheckDotNet\Win32_Loader_Analyser\Win32Loader.c(703,8): warning C4101: "szMessage": Unreferenzierte lokale Variable
+Win32Loader.obj : error LNK2005: _g_szNetfxStandardVersionRegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx20RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx30VersionBuild ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx10VersionString ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx35VersionMajor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx472ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx10RegKeyValue ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx40SPxRegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx462ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx40FullRegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx40VersionBuild ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfxStandardSPxRegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx451ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx30VersionMinor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx30RegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx40VersionRevision ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx45RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx30SpRegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx46ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx30VersionRevision ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx461ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx10RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx10SPxMSIRegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx30RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx47ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx10SPxOCMRegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfxStandardRegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx11RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx45ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx452ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx40VersionMinor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx35VersionMinor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx20VersionString ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx40VersionString ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx11VersionString ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx45RegValueName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx30VersionMajor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_dwNetfx471ReleaseVersion ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx35VersionBuild ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx35RegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx35VersionRevision ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_iNetfx40VersionMajor ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _g_szNetfx40ClientRegKeyName ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _main ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _RegistryGetValue ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _CheckNetfxBuildNumber ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _GetNetfxSPLevel ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx472Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx471Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx47Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx462Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx461Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx46Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx452Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx451Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx45Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx40FullInstalled ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx40ClientInstalled ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx35Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx30Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx20Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx11Installed ist bereits in Win32Analyser.obj definiert.
+Win32Loader.obj : error LNK2005: _IsNetfx10Installed ist bereits in Win32Analyser.obj definiert.
+I:\_Projekte\CheckDotNet\Release\Win32_Loader.exe : fatal error LNK1169: Mindestens ein mehrfach definiertes Symbol gefunden.
