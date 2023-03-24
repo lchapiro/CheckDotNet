@@ -28,9 +28,16 @@ namespace CheckDotNet
             List<String> list = _oWorker.GetFoundedDotNet();
             lstBoxFound.Columns.Add(new ColumnHeader());
             lstBoxFound.Columns[0].Width = lstBoxFound.Width - 2;
-            
+
             foreach (var oItem in list)
-                lstBoxFound.Items.Add(oItem);
+            {
+                var item = new ListViewItem(oItem);
+
+                if (oItem.Contains("not installed"))
+                    item.BackColor = Color.Tomato;
+
+                lstBoxFound.Items.Add(item);
+            }
 
             lstView.Columns.Add(new ColumnHeader());
             lstView.Columns[0].Text = Resources.MainWnd_MainWnd_Dateiname;
@@ -45,7 +52,7 @@ namespace CheckDotNet
             lstView.Columns[2].Width = 150;
 
             var toolTip = new ToolTip();
-            
+
             toolTip.ToolTipTitle = "Select Directory";
             toolTip.IsBalloon = true;
             toolTip.Show("Please select the target directory!", butGetDir);
@@ -63,7 +70,7 @@ namespace CheckDotNet
             toolTip.ToolTipTitle = "Directory:";
             toolTip.SetToolTip(txtDir, "");
             mnuItem_Report.Enabled = false;
-            
+
             try
             {
                 var fbd = new FolderBrowserDialog();
@@ -80,7 +87,7 @@ namespace CheckDotNet
 
                 _strSelectedPath = fbd.SelectedPath;
                 txtDir.Text = fbd.SelectedPath;
-                
+
                 toolTip.SetToolTip(txtDir, _strSelectedPath);
 
                 _listFiles.AddRange(Directory.GetFiles(fbd.SelectedPath, "*.exe"));
@@ -95,7 +102,7 @@ namespace CheckDotNet
                 string strVer, strOk;
                 string[] arVer;
                 ListViewItem lvItem;
-                
+
                 foreach (var file in _listFiles)
                 {
                     strOk = "";
@@ -109,10 +116,10 @@ namespace CheckDotNet
                         ass = null;
                         // Fallback, don't need any .NET!
                     }
-                    
+
                     if (ass != null)
                     {
-                       
+
                         strVer = ass.ImageRuntimeVersion;
                         arVer = strVer.Split('.');
 
@@ -134,7 +141,7 @@ namespace CheckDotNet
                                 strOk += " .NET3.5";
 
                             if (String.IsNullOrWhiteSpace(strOk))
-                                strOk = "nicht vorhanden";
+                                strOk = "not found";
                         }
                         else if (arVer[0] == "v2")
                         {
@@ -160,7 +167,7 @@ namespace CheckDotNet
                             if (targetFrameworkAttributes != null && targetFrameworkAttributes.Length > 0)
                             {
                                 var targetFrameworkAttribute =
-                                    (TargetFrameworkAttribute) targetFrameworkAttributes.First();
+                                    (TargetFrameworkAttribute)targetFrameworkAttributes.First();
                                 strVer = targetFrameworkAttribute.FrameworkDisplayName;
 
                                 if (strVer == ".NET Framework 4")
@@ -169,7 +176,7 @@ namespace CheckDotNet
                                         strOk = " .NET 4";
 
                                     if (_oWorker.IsNetfx45Installed() || _oWorker.IsNetfx451Installed() || _oWorker.IsNetfx452Installed() ||
-                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed())
+                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.5.x";
 
                                     if (String.IsNullOrWhiteSpace(strOk))
@@ -178,7 +185,7 @@ namespace CheckDotNet
                                 else if (strVer == ".NET Framework 4.5")
                                 {
                                     if (_oWorker.IsNetfx45Installed() || _oWorker.IsNetfx451Installed() || _oWorker.IsNetfx452Installed() ||
-                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed())
+                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.5.x";
                                     else
                                         strOk = "not found";
@@ -186,28 +193,28 @@ namespace CheckDotNet
                                 else if (strVer == ".NET Framework 4.5.1")
                                 {
                                     if (_oWorker.IsNetfx451Installed() || _oWorker.IsNetfx452Installed() ||
-                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed())
+                                        _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.5.x";
                                     else
                                         strOk = "not found";
                                 }
                                 else if (strVer == ".NET Framework 4.5.2")
                                 {
-                                    if (_oWorker.IsNetfx452Installed() || _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed())
+                                    if (_oWorker.IsNetfx452Installed() || _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.5.2";
                                     else
                                         strOk = "not found";
                                 }
                                 else if (strVer == ".NET Framework 4.6")
                                 {
-                                    if ( _oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed())
+                                    if (_oWorker.IsNetfx46Installed() || _oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.6";
                                     else
                                         strOk = "not found";
                                 }
                                 else if (strVer == ".NET Framework 4.6.1")
                                 {
-                                    if (_oWorker.IsNetfx461Installed())
+                                    if (_oWorker.IsNetfx461Installed() || _oWorker.IsNetfx462Installed())
                                         strOk += " .NET4.6.1";
                                     else
                                         strOk = "not found";
@@ -240,6 +247,20 @@ namespace CheckDotNet
                                     else
                                         strOk = "not found";
                                 }
+                                else if (strVer == ".NET Framework 4.8")
+                                {
+                                    if (_oWorker.IsNetfx48Installed())
+                                        strOk += " .NET4.8";
+                                    else
+                                        strOk = "not found";
+                                }
+                                else if (strVer == ".NET Framework 4.8.1")
+                                {
+                                    if (_oWorker.IsNetfx481Installed())
+                                        strOk += " .NET4.8.1";
+                                    else
+                                        strOk = "not found";
+                                }
                             }
                             else
                             {
@@ -252,7 +273,7 @@ namespace CheckDotNet
                                 if (String.IsNullOrWhiteSpace(strOk))
                                     strOk = "not found";
                             }
-                            
+
                         }
                         else
                         {
@@ -261,9 +282,9 @@ namespace CheckDotNet
 
                         // Cut the path from the "file", only file name need!
                         lvItem = new ListViewItem(new[] { Path.GetFileName(file), strVer, strOk });
-                        
+
                         if (strOk == "not found")
-                            lvItem.BackColor = Color.Red;
+                            lvItem.BackColor = Color.Tomato;
                         lstView.Items.Add(lvItem);
                     }
                 }
@@ -326,7 +347,7 @@ namespace CheckDotNet
                             if (subItem.Text.Length < 16)
                                 str += "\t";
                         }
-                        
+
                         sw.WriteLine(str);
                         str = "";
                     }
@@ -335,7 +356,7 @@ namespace CheckDotNet
                 }
 
 
-                
+
             }
             catch (Exception ex)
             {

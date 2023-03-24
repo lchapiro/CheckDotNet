@@ -58,11 +58,14 @@ namespace CheckDotNet
         const int GDwNetfx46ReleaseVersion = 393295;
 
         /* Version information for final release of .NET Framework 4.6.1 */
-        const int GDwNetfx461ReleaseVersion = 394254;
+        const int GDwNetfx461UpdateVersion = 394254;
+
+        /* Version information for final release of .NET Framework 4.6.1 */
+        const int GDwNetfx461ReleaseVersion = 394271;
 
         // Leo, 16.08.2018 .NET Framework 4.6.2
         /* Windows Server 2016: 394802  */
-        const int GDwNetfx462ServerVersion = 394254;
+        const int GDwNetfx462ServerVersion = 394802;
 
         /* On all other OS versions: 394806	*/
         const int GDwNetfx462ReleaseVersion = 394806;
@@ -88,6 +91,24 @@ namespace CheckDotNet
         /* On all other OS versions: 461814		.NET Framework 4.7.2 */
         const int GDwNetfx472ReleaseVersion = 461814;
 
+        /* Windows 10 May 2019 and 10 November 2019 Updates: 	.NET Framework 4.8 */
+        const int GDwNetfx48Update1Version = 528040;
+
+        /* Windows 10 May 2020, October 2020, May 2021 November 2021 and 2022 Updates: 	.NET Framework 4.8 */
+        const int GDwNetfx48Update2Version = 528372;
+
+        /* Windows 11 and Windows Server 2022: 	.NET Framework 4.8 */
+        const int GDwNetfx48ServerVersion = 528449;
+
+        /* On all other OS versions: 461310		.NET Framework 4.8 */
+        const int GDwNetfx48ReleaseVersion = 528049;
+
+        /* Windows 11 2022 Update: 		.NET Framework 4.8.1 */
+        const int GDwNetfx481UpdateVersion = 533320;
+
+        /* On all other OS versions: 		.NET Framework 4.7.1 */
+        const int GDwNetfx481ReleaseVersion = 533325;
+
         public AxWorker()
         {
             _oLog = new Logger();
@@ -102,7 +123,7 @@ namespace CheckDotNet
         {
             return IsNetfx40ClientInstalled() || IsNetfx40FullInstalled() || IsNetfx45Installed() ||
                     IsNetfx451Installed() || IsNetfx452Installed() || IsNetfx46Installed() || IsNetfx461Installed() ||
-                    IsNetfx462Installed() || IsNetfx47Installed() || IsNetfx471Installed() || IsNetfx472Installed();
+                    IsNetfx462Installed() || IsNetfx47Installed() || IsNetfx471Installed() || IsNetfx472Installed() || IsNetfx48Installed() || IsNetfx481Installed();
         }
 
         public List<String> GetFoundedDotNet()
@@ -137,6 +158,10 @@ namespace CheckDotNet
             bool bNetfx47Installed = (IsNetfx47Installed());
             bool bNetfx471Installed = (IsNetfx471Installed());
             bool bNetfx472Installed = (IsNetfx472Installed());
+
+            // Peter Thomas 08.01.2023
+            bool bNetfx48Installed = (IsNetfx48Installed());
+            bool bNetfx481Installed = (IsNetfx481Installed());
 
             /* If .NET Framework 1.0 is installed, get the service pack level */
             if (bNetfx10Installed)
@@ -196,7 +221,7 @@ namespace CheckDotNet
                 if (iNetfx35SpLevel > 0)
                 {
                     string str = String.Format(".NET Framework 3.5 service pack {0} is installed.", iNetfx35SpLevel);
-                     list.Add(str);
+                    list.Add(str);
                 }
                 else
                     list.Add(".NET Framework 3.5 is installed with no service packs.");
@@ -230,7 +255,7 @@ namespace CheckDotNet
                 if (iNetfx40FullSpLevel > 0)
                 {
                     string str = String.Format(".NET Framework 4 full service pack {0} is installed.", iNetfx40FullSpLevel);
-                    list.Add(str);   
+                    list.Add(str);
                 }
                 else
                     list.Add(".NET Framework 4 full is installed with no service packs.");
@@ -320,11 +345,25 @@ namespace CheckDotNet
             else
                 list.Add("\n\n.NET Framework 4.6.1 is not installed.");
 
+            // Leo, 29.10.2018
             if (bNetfx462Installed)
-            {
+                list.Add(".NET Framework 4.6.2 is installed.");
 
-            }
+            if (bNetfx47Installed)
+                list.Add(".NET Framework 4.7 is installed.");
 
+            if (bNetfx471Installed)
+                list.Add(".NET Framework 4.7.1 is installed.");
+
+            if (bNetfx472Installed)
+                list.Add(".NET Framework 4.7.2 is installed.");
+
+            // Peter Thomas 08.01.2023
+            if (bNetfx48Installed)
+                list.Add(".NET Framework 4.8 is installed.");
+
+            if (bNetfx481Installed)
+                list.Add(".NET Framework 4.8.1 is installed.");
             return list;
         }
 
@@ -340,7 +379,7 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx10Installed()
         {
-	        var oRet = Registry.GetValue(GSzNetfx10RegKeyName, GSzNetfx10RegKeyValue, "");
+            var oRet = Registry.GetValue(GSzNetfx10RegKeyName, GSzNetfx10RegKeyValue, "");
             return (oRet != null);
         }
 
@@ -357,23 +396,23 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx11Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx11RegKeyName, GSzNetfxStandardRegValueName, "");
                 if (oRet != null)
-	            {
-		            if ("1" == (string)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if ("1" == (string)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-            
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -389,24 +428,24 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx20Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx20RegKeyName, GSzNetfxStandardRegValueName, "");
                 if (oRet != null)
-	            {
-		            if (1 == (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (1 == (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-            
 
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -422,27 +461,27 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx30Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 /* Check that the InstallSuccess registry value exists and equals 1 */
                 var oRet = Registry.GetValue(GSzNetfx30RegKeyName, GSzNetfx30RegValueName, "");
-	            if (oRet != null)
-	            {
-		            if (1 == (Int32)oRet)
-			            bRetValue = true;
-	            }
+                if (oRet != null)
+                {
+                    if (1 == (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
 
-	        /* A system with a pre-release version of the .NET Framework 3.0 can
+            /* A system with a pre-release version of the .NET Framework 3.0 can
 	        have the InstallSuccess value.  As an added verification, check the
 	        version number listed in the registry */
-	        return (bRetValue && CheckNetfxBuildNumber(GSzNetfx30RegKeyName, GSzNetfxStandardVersionRegValueName, 
+            return (bRetValue && CheckNetfxBuildNumber(GSzNetfx30RegKeyName, GSzNetfxStandardVersionRegValueName,
                 GiNetfx30VersionMajor, GiNetfx30VersionMinor, GiNetfx30VersionBuild, GiNetfx30VersionRevision));
         }
 
@@ -459,28 +498,28 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx35Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 /* Check that the Install registry value exists and equals 1 */
                 var oRet = Registry.GetValue(GSzNetfx35RegKeyName, GSzNetfxStandardRegValueName, "");
-	            if (oRet != null)
-	            {
-		            if (1 == (Int32)oRet)
-			            bRetValue = true;
-	            }
+                if (oRet != null)
+                {
+                    if (1 == (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-	        
 
-	        /* A system with a pre-release version of the .NET Framework 3.5 can
+
+            /* A system with a pre-release version of the .NET Framework 3.5 can
 	        have the Install value.  As an added verification, check the
 	        version number listed in the registry */
-	        return (bRetValue && CheckNetfxBuildNumber(GSzNetfx35RegKeyName, GSzNetfxStandardVersionRegValueName, 
+            return (bRetValue && CheckNetfxBuildNumber(GSzNetfx35RegKeyName, GSzNetfxStandardVersionRegValueName,
                 GiNetfx35VersionMajor, GiNetfx35VersionMinor, GiNetfx35VersionBuild, GiNetfx35VersionRevision));
         }
 
@@ -497,27 +536,27 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx40ClientInstalled()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx40ClientRegKeyName, GSzNetfxStandardRegValueName, "");
                 if (oRet != null)
-	            {
-		            if (1 == (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (1 == (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-            
 
-	        /* A system with a pre-release version of the .NET Framework 4 can
+
+            /* A system with a pre-release version of the .NET Framework 4 can
 	        have the Install value.  As an added verification, check the
 	        version number listed in the registry */
-	        return (bRetValue && CheckNetfxBuildNumber(GSzNetfx40ClientRegKeyName, GSzNetfxStandardVersionRegValueName,
+            return (bRetValue && CheckNetfxBuildNumber(GSzNetfx40ClientRegKeyName, GSzNetfxStandardVersionRegValueName,
                             GiNetfx40VersionMajor, GiNetfx40VersionMinor, GiNetfx40VersionBuild, GiNetfx40VersionRevision));
         }
 
@@ -534,26 +573,26 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx40FullInstalled()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx40FullRegKeyName, GSzNetfxStandardRegValueName, "");
                 if (oRet != null)
-	            {
-		            if (1 == (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (1 == (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
-                _oLog.Write(ex);    
+                _oLog.Write(ex);
             }
-            
-	        /* A system with a pre-release version of the .NET Framework 4 can
+
+            /* A system with a pre-release version of the .NET Framework 4 can
 	        have the Install value.  As an added verification, check the
 	        version number listed in the registry */
-	        return (bRetValue && CheckNetfxBuildNumber(GSzNetfx40FullRegKeyName, GSzNetfxStandardVersionRegValueName, 
+            return (bRetValue && CheckNetfxBuildNumber(GSzNetfx40FullRegKeyName, GSzNetfxStandardVersionRegValueName,
                                 GiNetfx40VersionMajor, GiNetfx40VersionMinor, GiNetfx40VersionBuild, GiNetfx40VersionRevision));
         }
 
@@ -570,25 +609,25 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx45Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
 
                 if (oRet != null)
-	            {
-		            if (GDwNetfx45ReleaseVersion <= (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (GDwNetfx45ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-            
 
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -604,24 +643,24 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx451Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
 
                 if (oRet != null)
-	            {
-		            if (GDwNetfx451ReleaseVersion <= (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (GDwNetfx451ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-            
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -637,24 +676,24 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx452Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
-	            {
-		            if (GDwNetfx452ReleaseVersion <= (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (GDwNetfx452ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-	        
 
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -670,24 +709,24 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx46Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
-	            {
-		            if (GDwNetfx46ReleaseVersion <= (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (GDwNetfx46ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-	        
 
-	        return bRetValue;
+
+            return bRetValue;
         }
 
 
@@ -703,23 +742,23 @@ namespace CheckDotNet
         ******************************************************************/
         public bool IsNetfx461Installed()
         {
-	        bool bRetValue = false;
+            bool bRetValue = false;
 
             try
             {
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
-	            {
-                    if (GDwNetfx461ReleaseVersion <= (Int32)oRet)
-			            bRetValue = true;
-	            }
+                {
+                    if (GDwNetfx461UpdateVersion <= (Int32)oRet || GDwNetfx461ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
             }
             catch (Exception ex)
             {
                 _oLog.Write(ex);
             }
-	        
-	        return bRetValue;
+
+            return bRetValue;
         }
 
         // Leo, 16.08.2018
@@ -732,7 +771,7 @@ namespace CheckDotNet
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
                 {
-                    if (GDwNetfx462ServerVersion <= (Int32)oRet)
+                    if (GDwNetfx462ServerVersion <= (Int32)oRet || GDwNetfx462ReleaseVersion <= (Int32)oRet)
                         bRetValue = true;
                 }
             }
@@ -753,7 +792,7 @@ namespace CheckDotNet
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
                 {
-                    if (GDwNetfx47UpdateVersion <= (Int32)oRet)
+                    if (GDwNetfx47UpdateVersion <= (Int32)oRet || GDwNetfx47ReleaseVersion <= (Int32)oRet)
                         bRetValue = true;
                 }
             }
@@ -774,7 +813,7 @@ namespace CheckDotNet
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
                 {
-                    if (GDwNetfx471UpdateVersion <= (Int32)oRet)
+                    if (GDwNetfx471UpdateVersion <= (Int32)oRet || GDwNetfx471ReleaseVersion <= (Int32)oRet)
                         bRetValue = true;
                 }
             }
@@ -795,7 +834,49 @@ namespace CheckDotNet
                 var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
                 if (oRet != null)
                 {
-                    if (GDwNetfx472UpdateVersion <= (Int32)oRet)
+                    if (GDwNetfx472UpdateVersion <= (Int32)oRet || GDwNetfx472ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                _oLog.Write(ex);
+            }
+
+            return bRetValue;
+        }
+
+        public bool IsNetfx48Installed()
+        {
+            bool bRetValue = false;
+
+            try
+            {
+                var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
+                if (oRet != null)
+                {
+                    if (GDwNetfx48Update1Version <= (Int32)oRet || GDwNetfx48Update2Version <= (Int32)oRet || GDwNetfx48ServerVersion <= (Int32)oRet || GDwNetfx48ReleaseVersion <= (Int32)oRet)
+                        bRetValue = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                _oLog.Write(ex);
+            }
+
+            return bRetValue;
+        }
+
+        public bool IsNetfx481Installed()
+        {
+            bool bRetValue = false;
+
+            try
+            {
+                var oRet = Registry.GetValue(GSzNetfx45RegKeyName, GSzNetfx45RegValueName, "");
+                if (oRet != null)
+                {
+                    if (GDwNetfx481UpdateVersion <= (Int32)oRet || GDwNetfx481ReleaseVersion <= (Int32)oRet)
                         bRetValue = true;
                 }
             }
@@ -834,7 +915,7 @@ namespace CheckDotNet
 	        installed or there was some kind of error retrieving
 	        the data from the registry */
 
-	        return -1;
+            return -1;
         }
 
         /******************************************************************
@@ -846,30 +927,30 @@ namespace CheckDotNet
         Results:        true if the build number in the registry is greater
         than or equal to the passed in version; false otherwise
         ******************************************************************/
-        bool CheckNetfxBuildNumber( string pszNetfxRegKeyName, string pszNetfxRegKeyValue, 
-                                    int iRequestedVersionMajor, int iRequestedVersionMinor, 
+        bool CheckNetfxBuildNumber(string pszNetfxRegKeyName, string pszNetfxRegKeyValue,
+                                    int iRequestedVersionMajor, int iRequestedVersionMinor,
                                     int iRequestedVersionBuild, int iRequestedVersionRevision)
         {
-	        int iRegistryVersionMajor = 0;
-	        int iRegistryVersionMinor = 0;
-	        int iRegistryVersionBuild = 0;
-	        int iRegistryVersionRevision = 0;
+            int iRegistryVersionMajor = 0;
+            int iRegistryVersionMinor = 0;
+            int iRegistryVersionBuild = 0;
+            int iRegistryVersionRevision = 0;
 
             /* Attempt to retrieve the build number registry value */
-	        var oRet = Registry.GetValue(pszNetfxRegKeyName, pszNetfxRegKeyValue, "");
+            var oRet = Registry.GetValue(pszNetfxRegKeyName, pszNetfxRegKeyValue, "");
 
-	        if (oRet != null)
-	        {
-		        /* This registry value should be of the format
+            if (oRet != null)
+            {
+                /* This registry value should be of the format
 		        #.#.#####.##.  Try to parse the 4 parts of
 		        the version here */
-		        //pszToken = _tcstok_s(szRegValue, _T("."), &pszNextToken);
-	            var sRet = (string) oRet;
-	            string[] arVersions = sRet.Split('.');
+                //pszToken = _tcstok_s(szRegValue, _T("."), &pszNextToken);
+                var sRet = (string)oRet;
+                string[] arVersions = sRet.Split('.');
 
-	            if (arVersions.Length > 0)
-	            {
-	                iRegistryVersionMajor = Convert.ToInt32(arVersions[0]);
+                if (arVersions.Length > 0)
+                {
+                    iRegistryVersionMajor = Convert.ToInt32(arVersions[0]);
 
                     if (arVersions.Length > 1)
                         iRegistryVersionMinor = Convert.ToInt32(arVersions[1]);
@@ -879,15 +960,15 @@ namespace CheckDotNet
 
                     if (arVersions.Length > 3)
                         iRegistryVersionRevision = Convert.ToInt32(arVersions[3]);
-	            }
-	        }
+                }
+            }
 
-	        /* Compare the version number retrieved from the registry with
+            /* Compare the version number retrieved from the registry with
 	        the version number of the final release of the .NET Framework
 	        that we are checking */
-	        if (iRegistryVersionMajor > iRequestedVersionMajor)
-		        return true;
-	        
+            if (iRegistryVersionMajor > iRequestedVersionMajor)
+                return true;
+
             if (iRegistryVersionMajor == iRequestedVersionMajor)
             {
                 if (iRegistryVersionMinor > iRequestedVersionMinor)
@@ -909,7 +990,7 @@ namespace CheckDotNet
             /* If we get here, the version in the registry must be less than the
 	        // version of the final release of the .NET Framework we are checking,
 	        // so return false */
-	        return false;
+            return false;
         }
     }
 }

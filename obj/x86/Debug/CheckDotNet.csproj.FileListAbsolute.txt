@@ -1,0 +1,12 @@
+I:\_Projekte\CheckDotNet\bin\x86\Debug\CheckDotNet.exe.config
+I:\_Projekte\CheckDotNet\bin\x86\Debug\CheckDotNet.exe
+I:\_Projekte\CheckDotNet\bin\x86\Debug\CheckDotNet.pdb
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.csproj.AssemblyReference.cache
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.csproj.SuggestedBindingRedirects.cache
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.InfoWnd.resources
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.MainWnd.resources
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.Properties.Resources.resources
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.csproj.GenerateResource.cache
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.csproj.CoreCompileInputs.cache
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.exe
+I:\_Projekte\CheckDotNet\obj\x86\Debug\CheckDotNet.pdb
