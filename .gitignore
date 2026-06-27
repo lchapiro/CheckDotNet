@@ -1,0 +1,75 @@
+﻿# Build-Verzeichnisse (Binaries und Objects)
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio Einstellungsdateien und versteckte Ordner
+.vs/
+.venvs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.DotSettings.user
+*.v12.suo
+
+# Paket- und Wiederherstellungsordner (NuGet)
+packages/
+!packages/Build/
+[Nn]u[Gg]et.config
+!nuget.config
+*.nupkg
+
+# Test-Ergebnisse und Code Coverage
+TestResults/
+[Dd]ebugTestResults/
+[Rr]eleaseTestResults/
+*.coverage
+*.coveragexml
+
+# Benutzerdefinierte Profile und Einstellungen
+*.pubxml
+*.publishproj
+*.azurePubxml
+*.jfm
+*.local
+*.sln.local
+*.csproj.user
+
+# Profiling und Build-Logs
+*.vsp
+*.vspx
+*.psess
+*.sap
+*.vcdb
+
+# Sonstige generierte Dateien oder Systemdateien
+ClientBin/
+[Gg]enerated_[Ff]iles/
+_ReSharper*/
+[Tt]rash/
+[Tt]emp/
+$tf/
+*.lock.json
+project.lock.json
+project.fragment.lock.json
+*.opendb
+*.VC.db
+*.dbmdl
+*.aps
+*.opendb
+build/
+[Aa]pp[Dd]ata/
+[Mm]obile[Aa]pps/
